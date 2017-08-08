@@ -1,0 +1,63 @@
+h1 {
+  text-align: center;
+}
+
+.ttt-board {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.col {
+  width: 33%;
+  display: inline-block;
+  text-align: center
+}
+
+.square {
+  height: 150px;
+}
+
+.cell0 {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.cell1 {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.cell2 {
+  border-right: 2px solid;
+  width: 100%;
+}
+
+.cell3 {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.cell4 {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.cell5 {
+  border-right: 2px solid;
+  width: 100%;
+}
+
+.cell6 {
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.cell7 {
+  border-bottom: 2px solid;
+  width: 100%;
+}

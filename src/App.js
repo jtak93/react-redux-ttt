@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
-import Home from './home'
+import Home from './home/HomeContainer'
 import About from './about'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
@@ -12,14 +12,8 @@ class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <div>
-            <header>
-              <Link to="/">Home</Link>
-              <Link to="/about-us">About</Link>
-            </header>
-
             <main>
               <Route exact path="/" component={Home} />
-              <Route exact path="/about-us" component={About} />
             </main>
           </div>
         </ConnectedRouter>
