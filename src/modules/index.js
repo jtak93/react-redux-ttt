@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-import boardReducer from '../reducers/board'
+import boardReducer from '../Board/reducer'
 
 export default combineReducers({
   routing: routerReducer,
-  board: boardReducer,
+  game: boardReducer,
 })

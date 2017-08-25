@@ -9,7 +9,7 @@ h1 {
 }
 
 .col {
-  width: 33%;
+  width: 32%;
   display: inline-block;
   text-align: center
 }
@@ -21,43 +21,48 @@ h1 {
 .cell0 {
   border-right: 2px solid;
   border-bottom: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell1 {
   border-right: 2px solid;
   border-bottom: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell2 {
   border-right: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell3 {
   border-right: 2px solid;
   border-bottom: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell4 {
   border-right: 2px solid;
   border-bottom: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell5 {
   border-right: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell6 {
   border-bottom: 2px solid;
-  width: 100%;
+  width: 99%;
 }
 
 .cell7 {
   border-bottom: 2px solid;
-  width: 100%;
+  width: 99%;
+}
+.cell-value {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
 }
