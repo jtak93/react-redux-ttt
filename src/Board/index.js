@@ -19,6 +19,8 @@ class BoardContainer extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.props.turnCounter % 2 === 1) {
       this.AIMove()
+    } else {
+      this.checkWinner(this.props.board)
     }
   }
 
@@ -28,12 +30,12 @@ class BoardContainer extends Component {
     // make sure game isnt over
     if (!this.props.gameOver) {
       // if player 1 turn do player 1 move and cell isn't full
-      if (this.props.turnCounter % 2 === 0 && !this.props.board[cell].isFull) {
+      if (this.props.turnCounter % 2 === 0 && !this.props.board[cell]) {
         this.props.playerOneMove(cell)
         this.checkWinner(this.props.board)
       }
       //player 2 move
-      if (this.props.turnCounter % 2 === 1 && !this.props.board[cell].isFull) {
+      if (this.props.turnCounter % 2 === 1 && !this.props.board[cell]) {
         console.log('player two move')
         this.props.playerTwoMove(cell)
       }
@@ -44,10 +46,10 @@ class BoardContainer extends Component {
     let triples = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
     // iterate through triples and check to see if board values are equal at triple indices
     triples.map(triple => {
-      if (!this.props.gameOver && board[triple[0]].value === board[triple[1]].value
-        && board[triple[1]].value === board[triple[2]].value
-        && board[triple[0]].isFull && board[triple[1]].isFull && board[triple[2]].isFull) {
-          this.props.playerWins(board[triple[0]].value)
+      if (!this.props.gameOver && board[triple[0]] === board[triple[1]]
+        && board[triple[1]] === board[triple[2]]
+        && board[triple[0]] && board[triple[1]] && board[triple[2]]) {
+          this.props.playerWins(board[triple[0]])
       }
     })
   }
@@ -65,7 +67,6 @@ class BoardContainer extends Component {
       // check if there is available move
       if (nextMove) {
         this.props.playerTwoMove(nextMove)
-        this.checkWinner(this.props.board)
       }
     }
   }

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   text-align: center;
 }
@@ -9,6 +13,7 @@ h1 {
 }
 
 .col {
+  float: left;
   width: 32%;
   display: inline-block;
   text-align: center
@@ -60,9 +65,4 @@ h1 {
 .cell7 {
   border-bottom: 2px solid;
   width: 99%;
-}
-.cell-value {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
 }

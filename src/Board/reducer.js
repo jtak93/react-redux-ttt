@@ -7,15 +7,15 @@ import {
 
 const boardInitialState = {
   board: [
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false},
-    {value: 0, isFull: false}
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
   ],
   turnCounter: 0,
   isGameOver: false,
@@ -27,8 +27,7 @@ function boardReducer(state = boardInitialState, action) {
     case PLAYER_ONE_MOVE:
       console.log('p1 move')
       board = state.board
-      board[action.cell].value = 1
-      board[action.cell].isFull = true
+      board[action.cell] = 1
       return {
         ...state,
         board,
@@ -36,8 +35,7 @@ function boardReducer(state = boardInitialState, action) {
       }
     case PLAYER_TWO_MOVE:
       board = state.board
-      board[action.cell].value = 2
-      board[action.cell].isFull = true
+      board[action.cell] = 2
       return {
         ...state,
         board,
@@ -54,15 +52,15 @@ function boardReducer(state = boardInitialState, action) {
       return {
         ...state,
         board: [
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false},
-          {value: 0, isFull: false}
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
         ],
         turnCounter: 0,
         isGameOver: false,
