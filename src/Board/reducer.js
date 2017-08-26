@@ -25,7 +25,6 @@ function boardReducer(state = boardInitialState, action) {
   let board;
   switch (action.type) {
     case PLAYER_ONE_MOVE:
-      console.log('p1 move')
       board = state.board
       board[action.cell] = 1
       return {
