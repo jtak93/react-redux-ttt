@@ -49,7 +49,6 @@ function boardReducer(state = boardInitialState, action) {
       }
     case RESTART_GAME:
       return {
-        ...state,
         board: [
           null,
           null,
